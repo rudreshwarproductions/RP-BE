@@ -8,7 +8,6 @@ import {
   IsOptional,
   IsBoolean,
   IsDate,
-  IsUUID,
 } from 'class-validator';
 
 export class CreateCastingDto {

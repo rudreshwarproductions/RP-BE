@@ -9,7 +9,7 @@ export class CastingController {
   updateUserCasting(@Param('userId') userId: string) {}
 
   @Get('highlight')
-  getHighlightedCastingUsers() {}
+  async getHighlightedCastingUsers() {}
 
   @Patch(':userId/highlight')
   highlightUser(@Param('userId') userId: string) {}

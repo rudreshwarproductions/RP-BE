@@ -5,7 +5,7 @@ import { Client, Pool, QueryResult } from 'pg';
 export class DatabaseService {
   private readonly logger = new Logger(DatabaseService.name);
 
-  constructor(@Inject('DATABASE_POOL') private pool: Pool) {}
+  constructor(@Inject('DATABASE_POOL') public pool: Pool) {}
 
   async executeQuery(queryText: string, values: any[] = []): Promise<any[]> {
     this.logger.debug(`Executing query: ${queryText} [${values}]`);

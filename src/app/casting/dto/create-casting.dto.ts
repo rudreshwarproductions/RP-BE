@@ -21,7 +21,6 @@ export class CreateCastingDto {
   email: string;
 
   @IsNotEmpty()
-  @IsPhoneNumber(null)
   phone: string;
 
   @IsNotEmpty()
@@ -36,7 +35,7 @@ export class CreateCastingDto {
   @IsString()
   gender: string;
 
-  // Cast fields
+  // Casting fields
   @IsNotEmpty()
   @IsNumber()
   height: number;
@@ -72,38 +71,4 @@ export class CreateCastingDto {
   @IsOptional()
   @IsString()
   specialSkills: string;
-
-  @IsNotEmpty()
-  @IsArray()
-  imageLinks: string[];
-
-  @IsNotEmpty()
-  @IsArray()
-  videoLink: string[];
-
-  @IsOptional()
-  @IsArray()
-  resumeLink: string[];
-
-  @IsOptional()
-  @IsDate()
-  createdAt: Date;
-
-  @IsOptional()
-  @IsBoolean()
-  highlight: boolean;
-
-  // Contact fields
-  @IsOptional()
-  @IsBoolean()
-  contacted: boolean;
-
-  @IsOptional()
-  @IsString()
-  type: string;
-
-  // Other Fields
-  @IsOptional()
-  @IsNumber()
-  order: number;
 }

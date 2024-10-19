@@ -9,7 +9,7 @@ import {
   IsDate,
 } from 'class-validator';
 
-export class Cast {
+export class Casting {
   @IsNotEmpty()
   @IsNumber()
   height: number;
